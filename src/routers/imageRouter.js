@@ -29,6 +29,8 @@ imageRouter.post("/", upload.array("images", 5), async function (req, res) {
 
     const image = await new Image({
       // title:title,content:content,images:images
+      // ...req.body,
+      // images,
       title,
       content,
       images,
