@@ -2,8 +2,11 @@ const { User } = require("../models/User"); // Schema 경로 가져오는것
 const express = require("express");
 const userRouter = express.Router(); // 함수 가져오는것
 // const { Router } = require("express");
+
 const { hash, compare } = require("bcryptjs");
 const { upload } = require("../middlewares/imageUpload");
+
+//  request -> 요청 // response -> 응답
 
 //  포스트,post 우선  ( 회원가입 )
 userRouter.post("/reg", async function (req, res) {
